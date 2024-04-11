@@ -1,0 +1,67 @@
+.contenedor-info {
+    display: flex; /* Usa flexbox para alinear horizontalmente los elementos */
+    justify-content: center; /* Distribuye los elementos equitativamente */
+    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Envuelve los elementos si no caben en una sola fila */
+}
+
+.contenedor-info div {
+    flex: 1; /* Hace que los elementos ocupen un espacio igual dentro del contenedor */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 10px; /* Agrega un margen exterior de 10px a cada lado */
+}
+
+
+
+/*PRODUCTOS*/
+
+.productos {
+    display: flex;
+    justify-content: center;
+}
+
+.producto {
+    text-align: center;
+    width: 30%; /* ajusta el ancho según tu preferencia */
+}
+
+.producto img {
+    width: 100%; /* la imagen ocupa el 100% del ancho del div */
+    height: auto; /* la altura se ajusta automáticamente para mantener la proporción */
+}
+
+.producto h2 {
+    margin-top: 10px; /* margen superior para separar el título del producto */
+}
+
+.producto p {
+    margin-top: 5px; /* margen superior para separar la descripción del título */
+}
+
+.producto button {
+    margin-top: 10px; /* margen superior para separar el botón de la descripción */
+}
+
+
+/*FOOTER*/
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    }
+
+.redes {
+    margin-bottom: 20px;
+}
+
+.redes a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.ubicacion p {
+    margin: 0;
+}
+
+/* Hay medidas absolutas y medidas relativas /
+/ Normilize css (Lo que deberia de hacer son buenos ejemplos para ver como es) */
