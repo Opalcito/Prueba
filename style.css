@@ -20,48 +20,60 @@
 }
 
 .contenedor-info {
-    display: flex; /* Usa flexbox para alinear horizontalmente los elementos */
-    justify-content: center; /* Distribuye los elementos equitativamente */
-    align-items: center; /* Centra verticalmente los elementos */
-    flex-wrap: wrap; /* Envuelve los elementos si no caben en una sola fila */
+
+    display: flex; 
+    justify-content: center; 
+
     margin-bottom: 30px;
 }
 
 .contenedor-info div {
-    flex: 1; /* Hace que los elementos ocupen un espacio igual dentro del contenedor */
-    text-align: center; /* Centra el texto horizontalmente */
-    margin: 10px; /* Agrega un margen exterior de 10px a cada lado */
+
+    flex: 1; 
+    text-align: center; 
+    margin: 10px; 
 }
 
-/* Estilos para la sección .productos */
 .productos {
     display: flex;
     justify-content: center;
+
 }
 
 .producto {
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 2%;
+    border-color: gray;
     margin-top: 50px;
     text-align: center;
-    width: 30%; /* Ajusta el ancho según tu preferencia */
+    width: 30%; 
 }
 
 .producto img {
-    width: 50%; /* La imagen ocupa el 100% del ancho del div */
-    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    margin-top: 10px;
+    width: 50%; 
+    height: auto; 
     border-radius: 2%;
 }
 
 .producto h2 {
-    margin-top: 10px; /* Margen superior para separar el título del producto */
+    margin-top: 10px;
 }
 
 .producto p {
-    margin-top: 5px; /* Margen superior para separar la descripción del título */
+    margin-top: 5px; 
 }
 
 .producto button {
-    margin-top: 10px; /* Margen superior para separar el botón de la descripción */
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
+/*Quienes somos? (asi edito bien la foto)
+-----------------------
+-----------------------
+----------------------
+*/
 
 /* Estilos para el footer */
 footer {
@@ -77,15 +89,15 @@ footer {
 .footer-container > div {
     flex: 1;
     text-align: center;
-    padding: 0 10px; /* Agrega un poco de espacio alrededor del contenido */
-    max-width: 300px; /* Limita el ancho del contenido para que no se extienda demasiado */
+    padding: 0 10px; 
+    max-width: 300px; 
 
 
 
 }
 
 .redes,.contacto,.categorias {
-    text-align: center; /* Centra el texto dentro de cada sección */
+    text-align: center; 
 
 }
 
@@ -99,11 +111,31 @@ footer {
 }
 
 .categoria p {
-    margin: 0; /* Elimina el margen predeterminado */
+    margin: 0; 
 }
 
 
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 800px) {
+    .contenedor-info {
+        flex-direction: column; 
+        align-items: center; 
+    }
 
+    .contenedor-info div {
+        margin: 10px 0; 
+    }
 
-/* Hay medidas absolutas y medidas relativas /
-/ Normilize css (Lo que deberia de hacer son buenos ejemplos para ver como es) */
+    .productos {
+        flex-direction: column; 
+        align-items: center; 
+
+    }
+    .producto {
+        width: 100%;
+        margin: 10px;
+    }
+    .contendor-quienessomos img{
+        width: 50%;
+    }
+}
