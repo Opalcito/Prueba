@@ -1,0 +1,85 @@
+/* Estilos para la sección .contenedor-info */
+.contenedor-info {
+    display: flex; /* Usa flexbox para alinear horizontalmente los elementos */
+    justify-content: center; /* Distribuye los elementos equitativamente */
+    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Envuelve los elementos si no caben en una sola fila */
+}
+
+.contenedor-info div {
+    flex: 1; /* Hace que los elementos ocupen un espacio igual dentro del contenedor */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 10px; /* Agrega un margen exterior de 10px a cada lado */
+}
+
+/* Estilos para la sección .productos */
+.productos {
+    display: flex;
+    justify-content: center;
+}
+
+.producto {
+    text-align: center;
+    width: 30%; /* Ajusta el ancho según tu preferencia */
+}
+
+.producto img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del div */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+}
+
+.producto h2 {
+    margin-top: 10px; /* Margen superior para separar el título del producto */
+}
+
+.producto p {
+    margin-top: 5px; /* Margen superior para separar la descripción del título */
+}
+
+.producto button {
+    margin-top: 10px; /* Margen superior para separar el botón de la descripción */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-container > div {
+    flex: 1;
+    text-align: left;
+    padding: 0 10px; /* Agrega un poco de espacio alrededor del contenido */
+    max-width: 300px; /* Limita el ancho del contenido para que no se extienda demasiado */
+}
+
+.redes,
+.contacto,
+.categoria {
+    text-align: center; /* Centra el texto dentro de cada sección */
+}
+
+.redes a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.ubicacion p {
+    margin: 0;
+}
+
+.categoria p {
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+
+
+
+/* Hay medidas absolutas y medidas relativas /
+/ Normilize css (Lo que deberia de hacer son buenos ejemplos para ver como es) */
