@@ -27,6 +27,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/productos.html">Productos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <svg  id="verCarrito" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-basket3-fill" viewBox="0 0 16 16">
+                                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/></svg>    
+                        </a>
+                    </li> 
                 </ul>
             </div>
             </div>
@@ -35,14 +41,46 @@
 
     <div class="contendor-quienessomos">
         <div class="content">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia explicabo a officiis voluptatum impedit minus culpa! Magnam sapiente, atque aut unde optio animi voluptates delectus fugit enim, officia qui provident!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod architecto modi possimus totam fugiat mollitia dolores ex, sunt non ullam nisi repellendus labore laborum facilis eligendi, animi harum, maxime expedita?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut commodi, consectetur fugiat animi repellendus veniam saepe, minus laboriosam quos a ullam. Enim voluptate iste earum doloribus dolore suscipit quisquam nesciunt.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum consectetur aspernatur ea voluptates exercitationem nobis porro magni beatae aperiam inventore praesentium rem quisquam, odit est suscipit velit mollitia, iusto natus!</p>
-        </div>
+            <div class="quienes-somos">
+                <h2>Conoce a Nuestro Equipo</h2>
+        
+                <div class="presentacion">
+                    <h3>Joaquín y Catalina</h3>
+                    <p>
+                        Joaquín y Catalina somos estudiantes del Instituto Tecnológico de Buenos Aires (ITBA), ambos en Gestión de Negocios. A pesar de nuestra juventud, compartimos una visión común: crear un negocio innovador y con estilo.
+                    </p>
+                    <p>
+                        Nuestra amistad y pasión por la moda nos llevó a fundar esta marca de bolsos, enfocada en productos de alta calidad, comodidad y estilo distintivo.
+                    </p>
+                </div>
 
-        <img src="/imagenes/catayo.jpg" alt="QUIENES somos?">
+                <img class="QuienesSomos" src="/imagenes/catayo.jpg" alt="quienesomos">
+
+        
+                <h2>Nuestros Valores</h2>
+                <ul class="valores">
+                    <li><strong>Calidad</strong><p>Nuestros productos son de alta calidad, duraderos y resistentes.</p></li>
+                    <li><strong>Comodidad</strong><p>Diseñados para ser cómodos y funcionales, adaptándose a cualquier situación.</p></li>
+                    <li><strong>Identidad</strong><p>Cada producto tiene un estilo único y distintivo, reflejando la esencia de nuestra marca.</p></li>
+                    <li><strong>Sin Género</strong><p>Nuestros productos son para todos, sin importar la identidad de género.</p></li>
+                    <li><strong>Versatilidad</strong><p>Adaptables a diferentes situaciones, desde lo casual hasta lo formal.</p></li>
+                    <li><strong>Practicidad</strong><p>Productos funcionales y prácticos sin sacrificar el estilo.</p></li>
+                    <li><strong>Originalidad</strong><p>Ofrecemos accesorios que permiten a nuestros clientes expresar su estilo único.</p></li>
+                    <li><strong>Responsabilidad</strong><p>Compromiso con prácticas empresariales éticas y sostenibles.</p></li>
+                    <li><strong>Innovación</strong><p> Innovamos constantemente para seguir las tendencias del mercado y satisfacer las necesidades cambiantes de nuestros clientes.</p></li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    
+    <div  id="modalContenido" class="modalContent">
+    </div>
+    <div style="display:none" id="MContenido" class="productos"></div>
+
+    <script src="/prueba.js"></script>
+    
+
     <footer>
         <div class="footer-container">
             <div class="contacto">
@@ -71,8 +109,6 @@
                 <h4>Categorías</h4>
                 <ul>
                     <li>Bolsos</li>
-                    <li>Categoria 2</li>
-                    <li>Categoría 3</li>
                 </ul>
             </div>
         </div>
