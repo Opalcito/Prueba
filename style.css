@@ -1,89 +1,89 @@
 /* Estilos para la sección .contenedor-info */
 
 .bolsos-en-serio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
 }
 .bolsos-en-serio img{
-    margin-top: 20px;
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
 
 }
 
 .contenedor-info {
 
-    display: flex; 
-    justify-content: center; 
+  display: flex; 
+  justify-content: center; 
 
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .contenedor-info div {
 
-    flex: 1; 
-    text-align: center; 
-    margin: 10px; 
+  flex: 1; 
+  text-align: center; 
+  margin: 10px; 
 }
 /* MUESTRA DE PRODUCTOS */
 .productosmuestra {
-    margin-top: 100px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .productomuestra {
-    margin: 10px;
-    border-radius: 2%;
-    margin-top: 50px;
-    text-align: center;
-    width: 30%; 
+  margin: 10px;
+  border-radius: 2%;
+  margin-top: 50px;
+  text-align: center;
+  width: 30%; 
 }
 
 .productomuestra img {
-    margin-top: 10px;
-    width: 70%; 
-    height: auto; 
-    border-radius: 2%;
+  margin-top: 10px;
+  width: 70%; 
+  height: auto; 
+  border-radius: 2%;
 }
 
 .productomuestra h2 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .productomuestra p {
-    margin-top: 5px; 
+  margin-top: 5px; 
 }
 
 .botonverproductos {
-    display: flex;  /* Usa flexbox */
-    justify-content: center;  /* Centra horizontalmente */
-    align-items: center;  /* Centra verticalmente */
-    margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
 }
 .verproductos{
-    width: 100%;
-    background-color:rgb(4, 82, 4);  
-    color: #ffffff;  
-    padding: 5px 200px;  
-    border: none;  
-    border-radius: 1000px; 
-    font-size: 16px; 
-    cursor: pointer;  
-    text-align: center;  
-    }
-    
+  width: 100%;
+  background-color:rgb(4, 82, 4);  
+  color: #ffffff;  
+  padding: 5px 200px;  
+  border: none;  
+  border-radius: 1000px; 
+  font-size: 16px; 
+  cursor: pointer;  
+  text-align: center;  
+  }
+  
 .verproductos:hover {
-    background-color: rgb(25, 134, 25);  /* Color de fondo al pasar el mouse */
+  background-color: rgb(25, 134, 25);  /* Color de fondo al pasar el mouse */
 }
 /* MUESTRA DE PRODUCTOS */
 
@@ -91,102 +91,104 @@
 /*Quienes somos?*/
 
 .content img{
-    width: 30%;
-    border-radius: 10%;
-    margin-bottom: 70px;
+  width: 30%;
+  border-radius: 10%;
+  margin-bottom: 70px;
 }
 
 .quienes-somos {
-    display: flex;
-    flex-direction: column;  /* Orientación vertical para la sección */
-    align-items: center;  /* Centra el contenido horizontalmente */
-    text-align: center;  /* Centra el texto */
-    padding: 20px;  /* Espacio interno */
+  display: flex;
+  flex-direction: column;  /* Orientación vertical para la sección */
+  align-items: center;  /* Centra el contenido horizontalmente */
+  text-align: center;  /* Centra el texto */
+  padding: 20px;  /* Espacio interno */
 }
 
 .presentacion {
-    margin-bottom: 20px;  /* Espacio entre la presentación y los valores */
-    max-width: 600px; 
+  margin-bottom: 20px;  /* Espacio entre la presentación y los valores */
+  max-width: 600px; 
 }
 
 .presentacion img {
-    max-width: 200px; 
-    height: auto;  /* Mantiene la proporción de la imagen */
-    border-radius: 50%;  /* Hace la imagen redonda */
-    margin-bottom: 10px;  /* Espacio entre la imagen y el texto */
+  max-width: 200px; 
+  height: auto;  /* Mantiene la proporción de la imagen */
+  border-radius: 50%;  /* Hace la imagen redonda */
+  margin-bottom: 10px;  /* Espacio entre la imagen y el texto */
 }
 
 .valores {
-    display: flex;  /* Uso de flexbox */
-    flex-direction: row;  /* Disposición en filas */
-    flex-wrap: wrap;  /* Para múltiples filas */
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    align-content: stretch;  /* Estira las filas para altura uniforme */
-    gap: 3px;  /* Espacio entre celdas */
-    width: 100%;  /* Ancho total de la sección */
+  display: flex;  /* Uso de flexbox */
+  flex-direction: row;  /* Disposición en filas */
+  flex-wrap: wrap;  /* Para múltiples filas */
+  justify-content: center;  /* Centra el contenido horizontalmente */
+  align-content: stretch;  /* Estira las filas para altura uniforme */
+  gap: 3px;  /* Espacio entre celdas */
+  width: 100%;  /* Ancho total de la sección */
 }
 
 .valores li {
-    list-style: none;  /* Elimina los puntos de la lista */
-    border: 1px solid #ccc;  /* Agrega un borde a cada celda */
-    padding: 10px;  /* Espacio interno en cada celda */
-    text-align: center;  /* Centra el texto */
-    flex-basis: 30%;  /* Controla el ancho de las celdas */
-    height: 120px;  /* Asegura altura uniforme para todas las celdas */
+  list-style: none;  /* Elimina los puntos de la lista */
+  border: 1px solid #ccc;  /* Agrega un borde a cada celda */
+  padding: 10px;  /* Espacio interno en cada celda */
+  text-align: center;  /* Centra el texto */
+  flex-basis: 30%;  /* Controla el ancho de las celdas */
+  height: 120px;  /* Asegura altura uniforme para todas las celdas */
 }
 
 /* Estilos para el footer */
 footer {
-    background-color: aliceblue;
-    padding: 20px;
-    text-align: center;
+  background-color: aliceblue;
+  padding: 20px;
+  text-align: center;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer-container > div {
-    flex: 1;
-    text-align: center;
-    padding: 0 10px; 
-    max-width: 300px; 
+  flex: 1;
+  text-align: center;
+  padding: 0 10px; 
+  max-width: 300px; 
 
 
 
 }
 
 .redes,.contacto,.categorias {
-    text-align: center; 
+  text-align: center; 
 
 }
 
 .redes a {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .ubicacion p {
 
-    margin: 0;
+  margin: 0;
 }
 
 .categoria p {
-    margin: 0; 
+  margin: 0; 
 }
 
 
 
 /*--------SHOP----------*/
 
-.Mcontenido {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+.MContenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} 
 
 .product {
   display: inline-block;
+  
   border: 1px solid rgb(202, 201, 201);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -216,94 +218,129 @@ footer {
   color: black;
 }
 
-.productos a.boton {
-  display: block;
+.productos a.comprar {
+  display: flex;
+  justify-content: center;
   background-color: rgb(4, 82, 4);
   color: #FFFFFF;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
-.productos a.boton:hover {
+.productos .comprar:hover {
   background-color: rgb(25, 134, 25);
 
 }
+
+
 /*------ Estilo para el carrito -----------*/
 
 .modalContent {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 35%;
-  height: 100%; 
-  background-color: rgb(195, 195, 195);
-  overflow-y: auto; 
-  display: none;
-  border-radius: 7px;
-  border: 3px solid rgb(197, 197, 197);
-  
+position: fixed;
+top: 0;
+right: 0;
+width: 35%;
+height: 100%;
+background-color: rgb(195, 195, 195);
+overflow-y: auto;
+display: none;
+border-radius: 7px;
+border: 3px solid rgb(197, 197, 197);
+padding: 20px; /* Agrega padding para evitar bordes ajustados */
 }
 
 .modal-header {
-  background-color: #FFFFFF;
-  color: rgb(4, 82, 4);
-  padding: 17px;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
+background-color: #FFFFFF;
+color: rgb(4, 82, 4);
+padding: 17px;
+text-align: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+border-radius: 3px;
 }
 
 .modal-header-titulo {
-  margin: 0;
-  font-size: 24px;
+margin: 0;
+font-size: 24px;
 }
 
 .modal-header-button {
-  font-size: 24px;
-  cursor: pointer;
-  color: rgb(105, 105, 105) ;
+font-size: 24px;
+cursor: pointer;
+color: rgb(105, 105, 105);
 }
 
-
 .modal-contenido {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #FFFFFF;
-  border: 1px solid rgb(197, 197, 197);
-  border-radius: 5px;
+display: flex; /* Para alinear elementos en línea */
+justify-content: space-between; /* Para alinear el botón de eliminar a la derecha */
+align-items: center; /* Alinear verticalmente */
+margin: 10px 0;
+padding: 10px;
+background-color: #FFFFFF;
+border: 1px solid rgb(197, 197, 197);
+border-radius: 5px;
 }
 
 .modal-contenido img {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
+width: 100px;
+height: 100px;
+border-radius: 5px;
+margin-right: 10px;
+}
+
+.modal-contenido p,
+.modal-contenido h3 {
+margin: 0; /* Eliminar márgenes por defecto */
 }
 
 .modal-contenido p {
-  font-size: 18px;
-  margin: 0;
-  color: black;
+font-size: 18px;
+color: black;
 }
 
 .modal-contenido h3 {
-  font-size: 20px;
-  margin: 0;
+font-size: 20px;
+color: black;
 }
 
+.modal-contenido .eliminar-boton {
+background: #FFFFFF; /* Rojo */
+color: black;
+border: none;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.modal-contenido .eliminar-boton:hover {
+background: rgb(4, 82, 4);
+color: #FFFFFF;
+}
 
 .total-compra {
-  margin-top: 20px;
-  text-align: right;
-  font-size: 24px;
+margin-top: 20px;
+text-align: right;
+font-size: 24px;
 }
-/*------ Estilo para el carrito -----------*/
+
+.finalizarcompra {
+width: 100%;
+background-color:rgb(4, 82, 4);  
+color: #ffffff;  
+padding: 10px ;  
+border: none;  
+border-radius: 10px; 
+font-size: 16px; 
+cursor: pointer;  
+}
+
+.finalizar-compra:hover {
+background: rgb(25, 134, 25)
+}
+
 
 
 /*--------SHOP----------*/
@@ -311,25 +348,25 @@ footer {
 
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 800px) {
-    .contenedor-info {
-        flex-direction: column; 
-        align-items: center; 
-    }
+  .contenedor-info {
+      flex-direction: column; 
+      align-items: center; 
+  }
 
-    .contenedor-info div {
-        margin: 10px 0; 
-    }
+  .contenedor-info div {
+      margin: 10px 0; 
+  }
 
-    .productos {
-        flex-direction: column; 
-        align-items: center; 
+  .productos {
+      flex-direction: column; 
+      align-items: center; 
 
-    }
-    .producto {
-        width: 100%;
-        margin: 10px;
-    }
-    .contendor-quienessomos img{
-        width: 50%;
-    }
+  }
+  .producto {
+      width: 100%;
+      margin: 10px;
+  }
+  .contendor-quienessomos img{
+      width: 50%;
+  }
 }

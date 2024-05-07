@@ -1,104 +1,134 @@
+
 const MContenido = document.getElementById("MContenido");
 const verCarrito = document.getElementById("verCarrito");
-const modalContenido= document.getElementById("modalContenido")
+const modalContenido = document.getElementById("modalContenido");
 
-const mates= [
+// Lista de productos
+const bolsos = [
     {
         id: 1,
         nombre: "Opalo Negro",
         precio: 45000,
         img: "/imagenes/negro.jpg",
     },
-
     {
         id: 2,
         nombre: "Opalo Crudo",
         precio: 45000,
         img: "/imagenes/crudo.jpg",
-    },  
-
+    },
     {
         id: 3,
         nombre: "Opalo Gris",
         precio: 45000,
         img: "/imagenes/gris.jpg",
     },
-]
+];
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-
 function actualizarCarrito() {
     modalContenido.innerHTML = "";
+
     const modalHeader = document.createElement("div");
     modalHeader.className = "modal-header";
     modalHeader.innerHTML = `<h1 class="modal-header-titulo">Carrito</h1>`;
 
+    const modalCloseButton = document.createElement("h1");
+    modalCloseButton.innerText = "x";
+    modalCloseButton.className = "modal-header-button";
+
+    modalCloseButton.addEventListener("click", () => {
+        modalContenido.style.display = "none";
+    });
+
+    modalHeader.append(modalCloseButton);
+
     modalContenido.append(modalHeader);
 
-    const modalbutton = document.createElement("h1");
-    modalbutton.innerText = "x";
-    modalbutton.className = "modal-header-button";
-
-    modalbutton.addEventListener("click", () => {
-    modalContenido.style.display = "none";
-    }); 
-
-    modalHeader.append(modalbutton);
-
-    carrito.forEach((product) => {
-
-        let carritoContenido = document.createElement("div");
+    carrito.forEach((product, index) => {
+        const carritoContenido = document.createElement("div");
         carritoContenido.className = "modal-contenido";
         carritoContenido.innerHTML = `
-            <img src="${product.img}">
-            <p>${product.nombre}</p>
-            <h3>$${product.precio}</h3>
+            <img src="${product.img}" alt="${product.nombre}">
+            <div>
+                <p>${product.nombre}</p>
+                <h3>$${product.precio}</h3>
+            </div>
         `;
 
-    modalContenido.append(carritoContenido);
+        const eliminarBtn = document.createElement("button");
+        eliminarBtn.innerText = "x";
+        eliminarBtn.className = "eliminar-boton";
+        eliminarBtn.addEventListener("click", () => {
+            carrito.splice(index, 1); 
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarCarrito();
+        });
+
+        carritoContenido.append(eliminarBtn);
+        modalContenido.append(carritoContenido);
     });
 
-    const total = carrito.reduce((acc, price) => acc + price.precio, 0);
+    const total = carrito.reduce((acc, product) => acc + product.precio, 0);
 
-        const totalcompra = document.createElement("div");
-        totalcompra.className = "total-compra";
-        totalcompra.innerHTML = `Total a pagar: $${total}`;
-        modalContenido.append(totalcompra);
-    }   ;
+    const totalcompra = document.createElement("div");
+    totalcompra.className = "total-compra";
+    totalcompra.innerHTML = `Total a pagar: $${total}`;
+    modalContenido.append(totalcompra);
 
+    const comprarBtn = document.createElement("button");
+    comprarBtn.innerText = "Realizar compra";
+    comprarBtn.className = "finalizarcompra";
 
+    comprarBtn.addEventListener("click", finalizarCompra); 
 
-mates.forEach((product) => {
-    let contenidoM = document.createElement("div");
+    modalContenido.append(comprarBtn);
+}
+
+function finalizarCompra() {
+    Swal.fire({
+        title: 'Compra exitosa',
+        text: 'Gracias por tu compra. Recibirás tu pedido pronto.',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        timer: 3000, 
+    }).then(() => {
+        carrito = [];
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        actualizarCarrito(); 
+    });
+}
+
+bolsos.forEach((product) => {
+    const contenidoM = document.createElement("div");
     contenidoM.className = "product";
     contenidoM.innerHTML = `
-        <img src="${product.img}">
-        <p>${product.nombre}</p>
-        <h3>$${product.precio}</h3>
+        <img src="${product.img}" alt="${product.nombre}">
+        <div>
+            <p>${product.nombre}</p>
+            <h3>$${product.precio}</h3>
+        </div>
     `;
 
+    const comprarBtn = document.createElement("a");
+    comprarBtn.className = "comprar";
+    comprarBtn.innerText = "Comprar";
+
+    comprarBtn.addEventListener("click", () => {
+        carrito.push({
+            id: product.id,
+            img: product.img,
+            nombre: product.nombre,
+            precio: product.precio,
+        });
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        actualizarCarrito();
+    });
+
+    contenidoM.append(comprarBtn);
     MContenido.append(contenidoM);
-
-    let comprar = document.createElement("a");
-    comprar.className = "boton";
-    comprar.innerText = "Comprar";
-    contenidoM.append(comprar);
-
-    comprar.addEventListener("click", () => {
-    carrito.push({
-        id: product.id,
-        img: product.img,
-        nombre: product.nombre,
-        precio: product.precio,
-    });
-    console.log(carrito);  
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    actualizarCarrito();
-    });
 });
-
-
 
 verCarrito.addEventListener("click", () => {
     modalContenido.style.display = "block";
