@@ -1,4 +1,3 @@
-
 const MContenido = document.getElementById("MContenido");
 const verCarrito = document.getElementById("verCarrito");
 const modalContenido = document.getElementById("modalContenido");
@@ -54,6 +53,11 @@ function actualizarCarrito() {
             <div>
                 <p>${product.nombre}</p>
                 <h3>$${product.precio}</h3>
+                <div class="cantidad-container">
+                    <button class="cantidad-menos">-</button>
+                    <input type="number" min="1" value="${product.cantidad}" class="cantidad-producto" readonly>
+                    <button class="cantidad-mas">+</button>
+                </div>
             </div>
         `;
 
@@ -68,9 +72,28 @@ function actualizarCarrito() {
 
         carritoContenido.append(eliminarBtn);
         modalContenido.append(carritoContenido);
+
+        // Actualizar cantidad del producto
+        const cantidadInput = carritoContenido.querySelector(".cantidad-producto");
+        const cantidadMas = carritoContenido.querySelector(".cantidad-mas");
+        const cantidadMenos = carritoContenido.querySelector(".cantidad-menos");
+
+        cantidadMas.addEventListener("click", () => {
+            product.cantidad++;
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarCarrito();
+        });
+
+        cantidadMenos.addEventListener("click", () => {
+            if (product.cantidad > 1) {
+                product.cantidad--;
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                actualizarCarrito();
+            }
+        });
     });
 
-    const total = carrito.reduce((acc, product) => acc + product.precio, 0);
+    const total = carrito.reduce((acc, product) => acc + product.precio * product.cantidad, 0);
 
     const totalcompra = document.createElement("div");
     totalcompra.className = "total-compra";
@@ -116,12 +139,18 @@ bolsos.forEach((product) => {
     comprarBtn.innerText = "Comprar";
 
     comprarBtn.addEventListener("click", () => {
-        carrito.push({
-            id: product.id,
-            img: product.img,
-            nombre: product.nombre,
-            precio: product.precio,
-        });
+        const productoExistente = carrito.find(item => item.id === product.id);
+        if (productoExistente) {
+            productoExistente.cantidad++;
+        } else {
+            carrito.push({
+                id: product.id,
+                img: product.img,
+                nombre: product.nombre,
+                precio: product.precio,
+                cantidad: 1
+            });
+        }
         localStorage.setItem("carrito", JSON.stringify(carrito));
         actualizarCarrito();
     });
